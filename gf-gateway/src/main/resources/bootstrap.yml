@@ -1,0 +1,13 @@
+server:
+  # 指定服务的端口
+  port: 9000
+
+spring:
+  profiles:
+    active: dev
+
+# nacos服务器地址及端口号
+spring.cloud.nacos.config.server-addr: 127.0.0.1:8848
+
+# 配置中心的命名空间（不同的开发环境使用不同的命名空间进行区分）
+spring.cloud.nacos.config.namespace: 56dd2f36-904c-44e9-8998-cf18ba6908c6
