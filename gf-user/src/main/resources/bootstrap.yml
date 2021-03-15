@@ -1,6 +1,6 @@
 server:
   # 指定服务的端口
-  port: 9001
+  port: 9002
 
 spring:
   profiles:
@@ -21,3 +21,14 @@ spring:
         group: DEFAULT_GROUP  # 组名称，默认为 DEFAULT_GROUP
         namespace: b3c20747-6f69-48f4-bb5d-d48f2f76f53c  # 配置中心的命名空间(用于区分不同的项目)
         file-extension: yaml # 配置内容的数据格式，默认为properties
+
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gf_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:/mappers/*Mapper.xml
+  type-aliases-package: com.ligf.user.dao
