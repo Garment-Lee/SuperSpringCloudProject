@@ -11,6 +11,11 @@
         <module>gf-gateway</module>
         <module>gf-user</module>
         <module>gf-pojo</module>
+        <module>gf-product-service</module>
+        <module>gf-product-server</module>
+        <module>gf-user-server</module>
+        <module>gf-user-service</module>
+        <module>gf-service-api</module>
     </modules>
 
     <!--springboot版本-->
@@ -24,6 +29,7 @@
     <!--父项目使用pom-->
     <packaging>pom</packaging>
 
+    <!--依赖此父项目的子项目中引用下面的依赖时，不需要填写版本号，使用下面统一的版本号-->
     <dependencyManagement>
         <dependencies>
             <!--nacos 客户端 注册中心-->
@@ -39,7 +45,9 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>0.2.1.RELEASE</version>
             </dependency>
+
         </dependencies>
+
     </dependencyManagement>
 
 
