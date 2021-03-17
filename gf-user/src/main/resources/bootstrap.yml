@@ -14,20 +14,20 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        namespace: b3c20747-6f69-48f4-bb5d-d48f2f76f53c
+        namespace: 233554f3-394a-4fb3-984c-26f138b7a937
       config:
         enable: true     # 如果不想使用Nacos进行配置管理，设置为false即可，默认为true
         server-addr: 127.0.0.1:8848 # nacos服务器地址及端口号
         group: DEFAULT_GROUP  # 组名称，默认为 DEFAULT_GROUP
-        namespace: b3c20747-6f69-48f4-bb5d-d48f2f76f53c  # 配置中心的命名空间(用于区分不同的项目)
-        file-extension: yaml # 配置内容的数据格式，默认为properties
+        namespace: 233554f3-394a-4fb3-984c-26f138b7a937  # 配置中心的命名空间(用于区分不同的项目)
+        file-extension: yml # 配置内容的数据格式，默认为properties
 
 
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/gf_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
-    username: root
-    password: root
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/gf_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
+#    username: root
+#    password: root
 
 mybatis:
   mapper-locations: classpath:/mappers/*Mapper.xml

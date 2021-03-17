@@ -1,6 +1,7 @@
 package com.ligf.user.dao;
 
 import com.ligf.user.User;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @ClassName UserDao
@@ -9,7 +10,19 @@ import com.ligf.user.User;
  * @Date 2021/3/16 0:29
  **/
 public interface UserDao {
-    User findByUserNameAndPw(String name, String pw);
 
+    /**
+     * 根据账号密码查找对应的用户（@Param用于为请求参数指定引用别名）
+     * @param name
+     * @param password
+     * @return
+     */
+    User findByUserNameAndPw(@Param("userName") String name, String password);
+
+    /**
+     * 添加用户
+     * @param user
+     * @return
+     */
     int addUser(User user);
 }
