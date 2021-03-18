@@ -33,7 +33,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>0.2.1.RELEASE</version>
         </dependency>
 
         <!--gateway网关 -->

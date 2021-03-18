@@ -33,19 +33,33 @@
     <dependencyManagement>
         <dependencies>
             <!--nacos 客户端 注册中心-->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>2.2.1.RELEASE</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.alibaba.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+                <!--<version>2.2.5.RELEASE</version>-->
+            <!--</dependency>-->
 
-            <!--nacos 客户端 配置中心-->
+            <!--<dependency>-->
+                <!--<groupId>com.alibaba.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-starter-dubbo</artifactId>-->
+                <!--<version>2.2.5.RELEASE</version>-->
+            <!--</dependency>-->
+
+            <!--&lt;!&ndash;nacos 客户端 配置中心&ndash;&gt;-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-                <version>0.2.1.RELEASE</version>
+                <version>2.2.5.RELEASE</version>
             </dependency>
 
+            <!--spring cloud alibaba相关依赖包的版本管理，在子module中引入相关依赖包时，不需要填写版本号-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>

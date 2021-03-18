@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ligf.user.dao.UserDao">
+    <resultMap id="UserResultMap" type="com.ligf.user.User">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <id column="uid" property="uid" jdbcType="BIGINT"/>
+        <id column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <id column="password" property="password" jdbcType="VARCHAR"/>
+        <id column="age" property="age" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <insert id="addUser" parameterType="com.ligf.user.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user(uid, user_name, age, password)
+        values (#{uid}, #{userName}, #{age}, #{password})
+    </insert>
+    
+    <select id="findByUserNameAndPw" resultMap="UserResultMap">
+        select * from user where user_name = #{userName} and password = #{password}
+    </select>
+
+</mapper>

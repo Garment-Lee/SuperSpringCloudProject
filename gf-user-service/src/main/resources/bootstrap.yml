@@ -1,6 +1,6 @@
 server:
   # 指定服务的端口
-  port: 9001
+  port: 9002
 
 spring:
   profiles:
@@ -23,12 +23,24 @@ spring:
         file-extension: yml # 配置内容的数据格式，默认为properties
 
 #其他的配置都放在Nacos Config配置中心上
-#  datasource:
-#    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/gf_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
-#    username: root
-#    password: root
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gf_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
+    username: root
+    password: root
 
 #mybatis:
 #  mapper-locations: classpath:/mappers/*Mapper.xml
 #  type-aliases-package: com.ligf.user.dao
+#dubbo:
+#  scan:
+#    base-packages: com.ligf.userservice.service
+#  protocol:
+#    name: dubbo
+#    port: -1
+#  registry:
+#    address: spring-cloud://localhost
+#  cloud:
+#    subscribed-services:
+
+
