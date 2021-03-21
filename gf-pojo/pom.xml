@@ -13,14 +13,18 @@
     <packaging>pom</packaging>
     <modules>
         <module>user-pojo</module>
+        <module>product-pojo</module>
     </modules>
 
     <dependencies>
+
+        <!--lombok依赖，所有子模块都会继承这个依赖-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.14</version>
         </dependency>
+
     </dependencies>
 
 </project>

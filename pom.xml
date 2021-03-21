@@ -11,11 +11,11 @@
         <module>gf-gateway</module>
         <module>gf-user</module>
         <module>gf-pojo</module>
-        <module>gf-product-service</module>
         <module>gf-product-server</module>
         <module>gf-user-server</module>
         <module>gf-user-service</module>
         <module>gf-service-api</module>
+        <module>gf-product-service</module>
     </modules>
 
     <!--springboot版本-->
@@ -60,6 +60,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
         </dependencies>
 
     </dependencyManagement>
